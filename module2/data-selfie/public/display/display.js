@@ -1,5 +1,5 @@
 async function getData() {
-  const response = await fetch("api");
+  const response = await fetch("/api");
   const data = await response.json();
   return data;
 }
@@ -23,6 +23,7 @@ async function displayList() {
     longitudeElement.textContent = `Longitude: ${longitude}`;
     timestampElement.textContent = `Timestamp: ${timestamp}`;
     image.src = image64;
+    image.alt = `${name} selfie`;
 
     listItem.append(
       nameElement,
